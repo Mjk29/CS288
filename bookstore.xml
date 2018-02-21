@@ -1,0 +1,32 @@
+<bookstore>
+<book category="computer">
+<title lang="en">Emacs User Manual</title>
+<author>Richard Stallman</author>
+<year>1980</year>
+<price>12.00</price>
+</book>
+<book category="scifi" cover="paperback">
+<title lang="en">Timeline</title>
+<author>Michael Chricton</author>
+<year>1999</year>
+<price>15.00</price>
+</book>
+<book category="comedy" cover="hardcopy">
+<title lang="en">Catch 22</title>
+<author>Joseph Heller</author>
+<year>1961</year>
+<price>20.00</price>
+</book>
+<book category="mystery" cover="paperback">
+<title lang="en">Lost Symbol</title>
+<author>Dan Brown</author>
+<year>2009</year>
+<price>15.00</price>
+</book>
+<book category="comedy" cover="hardcopy">
+<title lang="en">The Hitchhikers Guide to The Galaxy</title>
+<author>Doug Adams</author>
+<year>1978</year>
+<price>10.00</price>
+</book>
+</bookstore>

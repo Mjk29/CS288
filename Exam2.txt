@@ -1,0 +1,293 @@
+Size of types on 64b machine
+
+	short int: 16
+		  int: 32
+	 long int: 64
+long long int: 64
+	   size_t: 64
+		void*: 64
+		float: 64
+	   double: 64
+
+
+Size of types on 32b machines
+
+		int: 32
+		float: 32
+
+
+
+
+Questions 1-3: Assume radix sorting of 1024 unsigned integers on a 32-bit machine with 4 passes
+(rounds). The integers are initially stored in lst[1024] and the sorted integers will be available in lst at the end of sorting. int buf[1024] is available as working space.
+
+1. What is the number of buckets?
+
+	4 pases 
+	32b int / 4 =  4, 8 bit groups
+
+	00000000 00000000 00000000 00000000 
+possible combinations
+		2^8		2^8		2^8		  2^8
+		256		256		256		  256
+
+	Need 256 bucket to sort.
+
+
+2. The bit mask in hexadecimal is?
+
+Bitmask in bin is  0b 00000000 00000000 00000000 11111111  = 256
+								(no spaces)
+
+256 in hex is 0xFF
+			16 * 16 = 256
+
+
+
+3. Find the number of data assignments for correcting the result after 4 passes are completed. For
+example, moving lst[i] to buf[j], or buf[j]=lst[i]; is a data assignment.
+
+	?? Unsigned int, can't be negative, doesn't need correction.????
+
+
+
+4. For floating point radix sort, assuming exactly half (512 floats) is negative, what is the num-
+ber of data assignments for correcting the result?
+
+
+	THe number of data assignments for correcting a float list with 512 negative numbers is equal to the double the amount of negative numbers. 
+
+
+
+
+5. Given float f; write a C statement to access the binary equivalent of f:
+
+
+
+	* (unsigned long *) (&f)
+
+
+6. In class, it was demonstrated through realtime execution that selection sort is super slow, merge sort is acceptable while radix sort is fast. Explain their performance in a sentence with not more than 20 words. You may use big O notation to simplify your answer.
+
+Selection sort is 	Θ(n^2)
+Merge sort is 		Θ(n log(n))
+Radix sort is 		Θ(nk)
+
+Selection sort must compare each number with each successive number
+Merge sort only compares numbers in groups
+Radix sort does not compare, 
+
+
+
+7. Given char *str = "?a???b,,,#c"; what would strtok(str, "?"); return?
+
+	char *str  is a pointer to a string, cant be changed
+	char str[] is an array of string characters that can be changed
+
+	strtok changes the input string, if given a pointer it will not work 
+
+	char * str    == static
+	char   str[]  == dynamic
+
+
+
+8. Continuing Problem 7 write fill in the blank such that strtok() will return ??b.
+strtok(_____________________________________);
+
+
+
+
+
+
+
+9. Continuing Problem 8, what would strtok(NULL, "#,"); return?
+	
+	returns a pointer to null. 
+
+
+
+For 10-15 on the 15-puzzle state-space search, consider open=(x,y) and succ=(p,q,r). Assuming the first one in open is always picked for search,
+
+
+10. find open after merging with succ using breadth-first search strategy.
+
+	breadth first appends succ to open
+
+	open = x y p q r
+
+
+
+11. find open after merging with succ using depth-first search strategy.
+
+	depth first prepends succ to open
+
+	open = p q r x y
+
+
+
+
+12. find open after merging with succ using best-first search strategy.
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring 2014
+
+ 4.	Given float f; which of the C statements would allow you to access the 
+	binary equivalent of f:
+
+	int x = * (unsigned long *) (&f)
+
+
+
+5.	From problem 4, you now have the floating point number f converted to x. Assuming char
+	s[32]; int i,n=32; which of the following C statements would store the binary equivalent of x
+	in the string s, where s[0] holds the sign bit (the most significant bit) of the original
+	number f while s[31] holds the least significant bit of the original number f:
+
+	for (i=0;i<n;i++) { s[n-1-i] = "01"[x&1]; x = x >> 1; }
+
+
+
+
+
+
+
+
+
+
+QUESTION 7 ON BOTH EXAMS
+
+STRTOK WORKS ON STR[] NOT ON *STR
+
+ASSUME THAT TO WORK STR[] IS THE CORRECT SETTING
+
+
+	char str[] = "?a???b,,,#c"; 
+	result = strtok (str,"?");
+
+
+	strtok will tokenize while removing the delmimiter
+
+	The first pass takes the string as an argument
+	Then strtok internally saves the pointer
+	After the first, all subsequent passes that 
+	occur on the same string must have NULL passed
+	as a value to strtok
+
+
+	The first pass of strtok 	
+	result = strtok (str,"?");
+
+
+	result will be = a
+
+	then for the rest of the string
+	strtok should be inside of a loop
+
+	while (result != NULL){
+		printf ("%s\n",result);
+		result = strtok (NULL, "?");
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. Given 
+	struct x { 
+		int a,b; 
+		struct x *p,*q; 
+	}; 
+	what would	sizeof(struct x) return?
+
+	32b machine
+	int = 4B
+	ptr = 4B
+
+
+	int a  int b  struct x  *p  *q
+	4		+4		+4		+4	+4		=20
+
+
+15. Given 
+
+	struct x { 
+		int **a,**b; 
+		struct x **p,**q; 
+	}; 
+
+what would
+	sizeof(struct x) return?
+
+	It will be the same on a 32B machine
+
+	int = 4B
+	ptr = 4B
+
+	total 20B
+
+	On a 64B machine, 
+	ptr = 8B
+
+
+
+
+
+
+Problem 14 (splitting string - 20 points): Write a C function that splits a string 
+line separated by commas and stores the values in an array of strings fields. 
+The number of commas is unknown and your function must be able to handle any 
+number ofcommas in the string. Use the following built-in functions: strtok(line, delim);  
+strtok(NULL, delim); malloc(strlen(token)); strcpy(fields[i],token);
+/* at the end of this function, fields will have n strings stored */
+void split_line(char **fields,char *line) {
+int i=0;
+char *token, *delim;
+
+
+
+
+
+
+	//result is array of arrays, has to be malloc
+	char **result=malloc(sizeof(char));
+	int i=0;
+
+	char str[] ="- This, a sample string.";
+	printf ("Splitting string \n \"%s\" \ninto tokens:\n\n",str);
+	
+
+	// Every element in the array must be malloc
+	result[i] = malloc(256);
+	strcpy(result[i], strtok(str, ",.-"));
+
+	while (result[i]){
+		// Malloc the element
+		result[i] = malloc(256);
+		//Both work
+		// strcpy(result[i], strtok(NULL, ",.-"));
+		result[i] = strtok(NULL,",.-");
+		i++;
+	}
+	printf("%s\n", result[0]);

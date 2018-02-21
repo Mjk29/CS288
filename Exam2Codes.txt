@@ -1,0 +1,208 @@
+
+	32b machine
+	int: 32b	4B
+	float: 32b	4B
+	ptr : 32b	4B
+
+	0b 00000000 00000000 00000000 11111111
+	0xFF
+
+	* (unsigned long *) (&f)
+
+	Selection sort is 	Θ(n^2)
+	Merge sort is 		Θ(n log(n))
+	Radix sort is 		Θ(nk)
+
+	First pass
+	strtok( str* , delim )
+	Does not work, must be str[]
+
+	Second Pass
+	strtop (NULL, delim);
+
+	Depth Prepend
+	Breadth APpend
+
+	for (i=0;i<n;i++) { s[n-1-i] = "01"[x&1]; x = x >> 1; }
+
+	Struct in a struct has no size. 
+
+
+
+
+//result is array of arrays, has to be malloc
+	char **result=malloc(sizeof(char));
+	int i=0;
+
+	char str[] ="- This, a sample string.";
+	printf ("Splitting string \n \"%s\" \ninto tokens:\n\n",str);
+	
+
+	// Every element in the array must be malloc
+	result[i] = malloc(256);
+	strcpy(result[i], strtok(str, ",.-"));
+
+	while (result[i]){
+		// Malloc the element
+		result[i] = malloc(256);
+		//Both work
+		// strcpy(result[i], strtok(NULL, ",.-"));
+		result[i] = strtok(NULL,",.-");
+		i++;
+	}
+	printf("%s\n", result[0]);
+
+
+	Radix Sort
+	Uncorrected float
+	low+ high+ low- high-
+
+	Uncorrected signed int
+	low+ high+ high- low-
+
+
+
+	
+//COUNTING PROCESS WORKING
+	for (int i = 0; i < 4; ++i){
+		
+		//initializes arays 
+		for (int t = 0; t < MAX_BUX; ++t){
+			cnt [t] = map[t] = buf[t] = 0 ;
+		}
+
+		//Applies mask and adds to count
+		for (int j = 0; j < n; ++j){
+			cnt[(lst[j] >> 8*i) & mask ] ++;
+		}	
+
+		//On last pass calculate negative numbers 
+		if (i == 3){
+			for (int q = 128; q < 255; ++q){
+				negcount += cnt[q];
+			}
+		}
+
+		//MAP : WORKING 
+		for (int k = 1; k < MAX_BUX; ++k){
+			map[k] = cnt[k-1] + map[k-1];
+		}
+
+		//MOVE : WORKING
+		for (int m = 0; m < n; ++m){
+			buf[ map [ (lst[m] >> 8*i) & mask ] ++ ] = lst[m];
+			cnt [ (lst [m] >>8*i) & mask ] --;
+		}
+
+		//For correcting negatives in float lists
+		if (negcount > 0){
+			for (int i = 0; i < negcount; ++i){
+				lst[i] = buf[n-(i+1)];
+				// fcounter++;
+			}
+			for (int i = 0; i < negcount; ++i){
+				lst[i+negcount] =buf[i];
+				// fcounter++;
+			}
+		}
+
+		//Assigning buffer to list for normal operation
+		else { 
+			for (int p = 0; p < n; ++p){
+			lst[p] = buf[p];
+			}
+		}
+
+
+void insert(struct clip *hp, int n) {
+
+	struct clip * clipPtr  = hp;
+	struct clip * lstClp   = hp;
+	struct clip * new_clip = (struct clip*)malloc(sizeof(struct clip));
+	
+
+	new_clip->views=n;
+	new_clip->next=NULL;
+
+	//If no list
+	if (!head){
+		head =new_clip;
+		return;
+	}
+
+
+
+	while (clipPtr->next){
+		clipPtr = clipPtr->next;
+	}
+
+	clipPtr = hp;
+
+	if (!clipPtr->next &&  new_clip->views > clipPtr->views){
+		new_clip->next = head;
+		head = new_clip;
+		return;
+	}
+
+	//Inserts in order
+	while(clipPtr->next &&  new_clip->views < clipPtr->next->views){
+		clipPtr = clipPtr->next;
+	}
+
+	new_clip->next = clipPtr->next;
+	clipPtr->next=new_clip;
+}
+
+
+
+int solvable(struct node *cp) {
+    int k=0,lst[NxN],cnt=0,total=0,row=0;
+    //flatten the board in to flat lst and work with that
+
+    //Sets lst to the total list of numbers
+    for (int i = 0; i < N; ++i){
+        for (int j = 0; j < N; ++j){
+            if (cp->board[i][j] == 0){ 
+                row = i;
+                continue;
+            }
+            lst[k++]=cp->board[i][j];
+        }
+    }
+
+    // printf("The list \n");
+    // for (int i = 0; i < NxN-1; ++i)
+    //     printf("%d ", lst[i]);
+    // printf("\n");
+
+
+
+
+    for (int i = 0; i < NxN-1; ++i)
+        for (int j = i; j < NxN-1; ++j)
+            if (lst[i] > lst[j])
+                cnt++;
+
+    if ( !(cnt & 1)){
+        // printf("cnt is even\n");
+        if (row & 1){
+            printf("%s\n", "Puzzle is solveable");
+            return 1;
+        }
+    }
+
+    //If the count is odd, and the 0 is on an even row it is solveable
+    if (cnt & 1){
+        // printf("cnt is odd\n");
+        if (!(row & 1)){
+            printf("%s\n", "Puzzle is solveable");
+            return 1;
+        }
+    }
+
+
+
+
+
+    //memcmp returns 0 if same
+			if(!(memcmp(tp->board, hp->board, sizeof(tp->board)))){

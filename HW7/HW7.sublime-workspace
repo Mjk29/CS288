@@ -1,0 +1,710 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print",
+				"printGobo"
+			],
+			[
+				"go",
+				"goblinType"
+			],
+			[
+				"ass",
+				"ASSGOBLINS"
+			],
+			[
+				"gob",
+				"printGobo"
+			],
+			[
+				"printn",
+				"print_a_node"
+			],
+			[
+				"pr",
+				"print_a_node"
+			],
+			[
+				"prin",
+				"printf\tprintf …"
+			],
+			[
+				"pri",
+				"printf\tprintf …"
+			],
+			[
+				"print_n",
+				"print_a_node"
+			],
+			[
+				"SUCC",
+				"SUCC"
+			],
+			[
+				"test",
+				"testNode"
+			],
+			[
+				"dir",
+				"direction"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"buff",
+				"buffSize"
+			],
+			[
+				"time",
+				"time_spent"
+			],
+			[
+				"neg",
+				"negcount"
+			],
+			[
+				"coun",
+				"Counters"
+			],
+			[
+				"float",
+				"floatList"
+			],
+			[
+				"MAX_",
+				"MAX_BUX"
+			],
+			[
+				"MAX",
+				"MAX_BUX"
+			],
+			[
+				"ra",
+				"radix_sort"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"int",
+				"int_radix_sort"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"f",
+				"fprintf\tfprintf …"
+			],
+			[
+				"userNa",
+				"userName"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame.cpp: In function ‘int main()’:\n/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame.cpp:32:2: error: duplicate label ‘gobo’\n  gobo:whatGobo();\n  ^~~~\n[Finished in 0.3s with exit code 1]\n[shell_cmd: g++ \"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame.cpp\" -o \"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame\" && \"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame\"]\n[dir: /media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples]\n[path: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]",
+			"settings":
+			{
+				"buffer_size": 713,
+				"line_ending": "Unix",
+				"name": "Build output",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/create_world.cpp",
+			"settings":
+			{
+				"buffer_size": 430,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/assgoblins.hpp",
+			"settings":
+			{
+				"buffer_size": 134,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/assgoblins.cpp",
+			"settings":
+			{
+				"buffer_size": 297,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/ObjDispatcher.hpp",
+			"settings":
+			{
+				"buffer_size": 3348,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/World.hpp",
+			"settings":
+			{
+				"buffer_size": 613,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <iostream>\n// #include <\"../include/all/assgoblins.hpp\">\n#include \"assgoblins.cpp\"\n\n\n\n\n\n// class goblinType{\n// public:\n//   int bar;\n// };\n\n\t\n\n\nint main(){\n\n\t// std::cout<<\"assgoblins TEST\"<<std::endl;\n\n\t// gobo::goblinType ass;\n\n\t// ASSGOBLINS::goblinType ass;\n\n\t// gobo.goblinType p;\n\n\tgobo:printGobo();\n\t\tstd::cout<<std::endl;\n\n\n\t// gobo:goblinType ass;\n\tgobo:whatGobo();\n\n\n\treturn 0;\n\n}",
+			"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame.cpp",
+			"file_size": 400,
+			"file_write_time": 131544684384744349,
+			"settings":
+			{
+				"buffer_size": 400,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++ Single File.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "Run",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "color",
+		"selected_items":
+		[
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"package control ins",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"",
+				"Build With: C - Run"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"colors",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"package control: install\t",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 524.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/matt/5TB/Documents/CS288/HW7"
+	],
+	"file_history":
+	[
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/dummy_test.cc",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/dummy_mock_test.cc",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/src/World.cpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/src/unqlite.c",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/src/ReceiverBase.cpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/ObjDispatcher.hpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/ReceiverBase.hpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/unqlite.h",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/World.hpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/src/ObjDispatcher.cpp",
+		"/media/matt/5TB/Documents/CS288/HW7/test.c",
+		"/home/matt/.config/sublime-text-3/Packages/User/C.sublime-build",
+		"/media/matt/5TB/Documents/CS288/HW7/HW7.c",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/CS485-Fall-2017/objlib/test/gtest.h",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/CS485-Fall-2017/README.md",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/CS485-Fall-2017/objlib/test/WorldTest.cpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/CS485-Fall-2017/objlib/src/frame.cpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/CS485-Fall-2017/objlib/src/World.cpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/create_world.cpp",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/build/Makefile",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/CMakeLists.txt",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/CMakeLists.txt",
+		"/media/matt/5TB/Documents/CS485/CS485-Fall-2017/README.md",
+		"/media/matt/5TB/Documents/CS288/HW6/Submit/HW6.c",
+		"/media/matt/5TB/Documents/CS288/HW6/bittest.c",
+		"/media/matt/5TB/Documents/CS288/HW6/radixSample.c",
+		"/media/matt/5TB/Documents/CS288/HW6/mergeS.c",
+		"/media/matt/5TB/Documents/CS288/HW6/HW6.c",
+		"/home/matt/Downloads/Radix/IceRevisitedRadix.cpp",
+		"/home/matt/Downloads/hw6.c",
+		"/home/matt/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/matt/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/matt/.config/sublime-text-3/Packages/User/PackageResourceViewer.sublime-settings",
+		"/media/matt/5TB/Documents/CS288/HW5/youtube.csv",
+		"/media/matt/5TB/Backup 10-1-17/From Ubuntu/CS288/HW3/youtube.csv",
+		"/home/matt/Downloads/hw5.c",
+		"/media/matt/5TB/Documents/NJIT/2017/Fall/CS288/createTidy.sh",
+		"/media/matt/5TB/Documents/CS288/HW4/homework4.c",
+		"/media/matt/5TB/Documents/CS288/HW4/hw4.c",
+		"/media/matt/5TB/Backup 10-1-17/From Ubuntu/CS288/HW3/hw3.sh",
+		"/media/matt/5TB/Documents/CS288/bashtest",
+		"/media/matt/5TB/Backup 10-1-17/From Ubuntu/CS288/HW3/index3.html",
+		"/media/matt/Crucial SSD/DNDCODE/FATAL Size Calc/build-SizeCalc-Desktop-Release/moc_mainwindow.cpp"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 110.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fuck",
+			"jew",
+			"kike",
+			"nigg",
+			"ass",
+			"roo",
+			"rine",
+			"->next",
+			"printf",
+			"prin",
+			"malloc",
+			"->next",
+			"append",
+			"apend",
+			"free",
+			"free(",
+			"nodes_s",
+			"->prev",
+			"expand",
+			"move",
+			"expand",
+			"goal",
+			"ASDHAIOWDGHIQWUH",
+			"empty",
+			"find_h",
+			"strategy",
+			"prepend",
+			"15"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								713,
+								713
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/create_world.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/assgoblins.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/assgoblins.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/ObjDispatcher.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2267,
+								2267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/include/all/World.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "/media/matt/5TB/Documents/CS485/CS485-Fall-2017/objlib/examples/makeFrame.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.182734375,
+			0.55375,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 229.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "HW7.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 2,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

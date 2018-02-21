@@ -1,0 +1,356 @@
+Strtok
+========================
+//result is array of arrays, has to be malloc
+    char **result=malloc(sizeof(char));
+    int i=0;
+
+    char str[] ="- This, a sample string.";
+    printf ("Splitting string \n \"%s\" \ninto tokens:\n\n",str);
+    
+
+    // Every element in the array must be malloc
+    result[i] = malloc(256);
+    strcpy(result[i], strtok(str, ",.-"));
+
+    while (result[i]){
+        // Malloc the element
+        result[i] = malloc(256);
+        //Both work
+        // strcpy(result[i], strtok(NULL, ",.-"));
+        result[i] = strtok(NULL,",.-");
+        i++;
+    }
+    printf("%s\n", result[0]);
+
+15 puzzle 
+========================
+int main(int argc,char **argv) {
+	int iter,cnt=0,total=1,ocnt=0,ccnt=0;
+	int perm;		/* perm=odd=no solution, perm=even=solvable */
+	struct node *cp,*open,*closed,*succ,*tp;
+	int scount=0;
+
+	open=closed=succ=NULL;
+	
+	start=initialize(argc,argv);	/* init initial and goal states */
+	testNode=initialize(argc,argv);
+
+	for (int i = 0; i < argc; ++i){
+		if (strcmp(argv[i],"-p")==0){
+			print_a_node(start);
+		}
+	}
+
+    empty=(struct node *) malloc(sizeof(struct node));
+	for (int test1 = 0; test1 < N; ++test1)
+		for (int test2 = 0; test2 < N; ++test2)
+			testNode->board[test1][test2] = start->board[test1][test2];
+		
+	perm=solvable(start);		/* check if solvable permutation */
+	if (!(perm & 1))
+	exit(0);
+
+	open=start; 
+	iter=0;
+	
+	while (open) {
+
+		scount = count(succ);
+		ocnt=count(open);
+		ccnt=count(closed);
+	
+		cp=open;
+		open=open->next;
+		cp->next=NULL; /* get the first node from open */
+
+		succ = expand(cp);			     /* Find new successors */
+		succ = filter(succ,open);		      //New succ list 
+		succ = filter(succ,closed);		     /* New succ list */
+
+		cnt=count(succ);
+		total=total+cnt;
+
+		if (succ) 
+			open=merge(succ,open,strategy); /* New open list */
+			closed=append(cp,closed);	/* New closed */
+
+		if ((cp=goal_found(succ,goal))) {
+			printf("Goal found\n");
+		}
+	}
+
+	printf("%s strategy: %d iterations %d nodes\n",strategy_s,iter+1,total);
+	find_path(cp,open,closed);
+
+    return 0;
+} /* end of main */
+
+    MERGE
+========================
+struct node *merge(struct node *succ,struct node *currlst,int flg) {
+	struct node *csucc,*copen;
+
+
+	if (flg==DFS) 	/* attach in the front: succ -> ... -> open */	
+		currlst=prepend(succ,currlst);			
+	else if (flg==BFS)   /* attach at the end: open -> ... -> succ */
+		currlst=append(succ,currlst);		
+	else if (flg==BEST) {	/* Best first: sort on h value */
+		
+	else			/* A* search: sort on f=g+h value */
+
+	return currlst;
+}
+MOVE
+========================
+struct node *move(struct node *cp, int a, int b, int x, int y, int dir){
+	struct node *newp;
+	int i,j,k,l,tmp,g,h,f;
+	newp = malloc(sizeof(struct node));
+
+	for (int i = 0; i < N; ++i)
+		for (int j = 0; j < N; ++j)
+			newp->board[i][j] = cp->board[i][j]
+
+	tmp = newp->board[a][b];
+	newp->board[a][b] = newp->board[x][y];
+	newp->board[x][y] =tmp;
+
+	g=count(newp);
+	h=manhattanDist(newp);
+	f=g+h;
+
+	newp->board[4][0]=f;
+	newp->board[4][1]=g;
+	newp->board[4][2]=h;
+	newp->board[4][3]=dir;
+
+	return newp;
+}
+
+
+
+PHP 
+========================
+$con = mysql_connect("localhost","cs288","");
+
+$db = mysql_select_db("stock_market");
+$table = "time-stmp";
+$query = "Select * from $table";
+rows = mysql_query($query);
+ncol = mysql_num_fields($rows);
+mysql_field_name($rows,$cols);
+
+echo "<tr>";
+
+for ($col = 0; $col < $ncol; $col++){
+	$field = mysql_field_name($rows, $col);
+	echo ("<th> $field </th>");
+}
+echo("</tr>");
+while ($row = mysql_fetch_array($rows))
+	echo ("<tr>");
+	for ($col = 0; $col < $ncol; $col++)
+		echo("<td> $row[$col] </td>");
+
+mysql_close($con);
+
+
+Matrix multiplication
+========================
+
+int jacobi(){
+	printf("Jacobi Method\n");
+	int k =0;
+	int j=0;
+	float sum;
+	float diff[n][n];
+
+	//Sets diff
+	for (int i = 0; i < n; ++i)
+		for (int j = 0; j < n; ++j)
+			diff[i][j]=0;
+
+	while(!convergence() && (k < MAX_ITER)){
+		for (int i = 0; i < n; ++i){
+			sum=0;
+			for (j = 0; j < n; ++j){
+				if (j != i)		
+					sum+=a[i][j]*x[j];
+			}
+			for (int i = 0; i < n; ++i)
+				x[i] = tx[i];	
+		k++;
+	}
+ 		print_equation();
+	return k;
+}
+
+int gauss(){
+
+	printf("Gauss Method\n");
+	int k =0;
+	int j=0;
+	float sum;
+	float diff[n][n];
+	//Sets diff
+	for (int i = 0; i < n; ++i)
+		for (int j = 0; j < n; ++j)
+			diff[i][j]=0;
+
+	while(!convergence() && (k < MAX_ITER)){
+		for (int i = 0; i < n; ++i){	
+			sum=0;
+			for (j = 0; j < n; ++j){
+				if (j != i){			
+					sum+=a[i][j]*x[j];		
+				}
+			}			
+			diff[i][1] = fabsf(diff[i][0] - ( b[i]-sum )/ a[i][i]);
+			diff[i][0]=x[i];
+		
+			if (diff[i][1] > 10000){
+				printf("Not Solveable ========================\n");
+				flag = 1;
+				return 0;
+			}
+			x[i] = ( b[i]-sum )/(d[i][i]);	
+		}
+		k++;
+	}
+ 		print_equation();
+	return k;
+}
+
+DONG TREE
+========================
+
+def main():
+	lst = []
+	global dom
+	dom = parse('bookstore.xml')
+	lst = process_dom_tree(dom)
+
+def process_dom_tree(dm):
+	lst = []
+
+	lst=dom.getElementsByTagName("bookstore")
+	elements = map(lambda x: get_text(x),lst)[0]
+	
+	for x in elements:
+		print x
+
+
+def get_text(e):
+	lst=[]
+	if e.nodeType in (3,4):
+		if e.data!='\n':
+			lst.append(e.data)
+	else:
+		for x in e.childNodes:
+			lst=lst+get_text(x)
+	return lst
+
+MPI
+========================
+int ierr, num_procs, my_id;
+
+//my_id is garbage outside of mpi block
+initMatrix(my_id,mtrxA);
+initMatrix(my_id,mtrxB);
+
+ierr =MPI_Init( &argc, & argv );
+ierr = MPI_Comm_rank(MPI_COMM_WORLD, &my_id);
+ierr = MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
+
+
+
+int tmp_prod = 123;
+int number[nrc];
+
+//Master Commands
+if (my_id == MASTER){
+
+	//Get row of matrix turn it into a vector
+	int* vector = vectorGen(mtrxA,my_id);
+	
+	//Compute dot prod of vector and matrix. 
+	vector = dot_product(vector, mtrxB);
+
+	combineMatrix(0, vector, mtrxC);
+	for (int i = 1; i < num_procs; ++i)	{
+		MPI_Recv(vector, nrc, MPI_INT, i, 69, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+		combineMatrix(i, vector, mtrxC);
+	}
+	free(vector);
+}
+
+//Slave commands
+else if (my_id != MASTER){	
+	int *vector = vectorGen(mtrxA,my_id);
+	vector = dot_product(vector, mtrxB);
+	MPI_Send(vector,nrc,MPI_INT,MASTER,69,MPI_COMM_WORLD);	
+	free(vector);
+}
+
+ierr = MPI_Finalize(); 
+}
+
+Dot product
+========================
+int *dot_product(int vector[nrc], int matrix[nrc][nrc]){
+	int tempVector[nrc];
+
+	for (int j = 0; j < nrc; ++j){
+		for (int k = 0; k < nrc; ++k){
+			sum += (vector[j] * matrix[k][j]);
+		}
+	vector[j]=sum;
+	sum=0;
+	}	
+	return vector;
+}
+
+
+RADIX
+========================
+for (int i = 0; i < 4; ++i){
+
+//initializes arays
+for (int t = 0; t < MAX_BUX; ++t)
+    cnt [t] = map[t] = buf[t] = 0 ;
+COUNT
+for (int j = 0; j < n; ++j)
+    cnt[(lst[j] >> 8*i) & mask ] ++; 
+
+if (i == 3)
+    for (int q = 128; q < 255; ++q)
+        negcount += cnt[q];
+
+MAP
+for (int k = 1; k < MAX_BUX; ++k)
+    map[k] = cnt[k-1] + map[k-1];
+
+MOVE
+for (int m = 0; m < n; ++m){
+    buf[ map [ (lst[m] >> 8*i) & mask ] ++ ] = lst[m];
+    cnt [ (lst [m] >>8*i) & mask ] --; }
+
+//For correcting negatives in float lists
+if (negcount > 0){
+    for (int i = 0; i < negcount; ++i){
+        lst[i] = buf[n-(i+1)];
+        // fcounter++;
+    }
+    for (int i = 0; i < negcount; ++i){
+        lst[i+negcount] =buf[i];
+        // fcounter++;
+    }
+}
+
+//Assigning buffer to list for normal operation
+else {
+    for (int p = 0; p < n; ++p){
+    lst[p] = buf[p];
+    }
+}

@@ -1,0 +1,56 @@
+
+l1=(1 2)
+
+l2=(x y)
+
+
+x="${l2[@]} ${l1[@]}"
+echo $x
+
+# function f() { local p=$2; q=1; r=$1; }
+# function main() { p=1; q=2; r=3; f $p $q $r; echo $p $q $r; }
+
+# main
+
+
+ 
+# x="abc"
+ 
+# [[ $x > 123 ]] && echo yes || echo no 
+ 
+
+
+# if [[ $x > 123 ]]; then
+# 	echo "yes"
+# fi
+
+
+# s="<span class="viewcount">/acct/1,696,807/name/</span>"
+
+
+# # echo $s | tr -d [:alpha:] | tr -d [:punct:]
+
+
+# x="Mr abc came home to Mrs abc and visit Mr xyz and Mrs xyz to discuss backreferences"
+
+# echo $x | grep -o "Mr \([a-z])\ came home to Mrs \1 and visit Mr \1"
+
+# grep -v ^p fruits.txt
+
+# x=(1 2 3 4 5)
+# # i=0
+# for i in ${x[@]}; do
+# 	((i+=i))
+# 	# echo $i
+# done
+
+# echo $i
+
+
+
+# x=1
+# ((--x))
+# echo $x
+
+
+

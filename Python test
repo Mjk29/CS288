@@ -1,0 +1,19 @@
+import re
+from xml.dom.minidom import parse, parseString <?xml version="1.0" encoding="ISO-8859-1"?>
+
+def process_dom_tree(dm):
+lst = []
+elms = dm.getElementsByTagName('book')
+//print elms.length,elms
+for elm in elms:
+l = get_text(elm)
+lst.append(l)
+return lst
+def main():
+lst = []
+global dom
+dom = parse('bookstore.xml')
+lst = process_dom_tree(dom)
+return lst
+if __name__ == "__main__":
+main()
